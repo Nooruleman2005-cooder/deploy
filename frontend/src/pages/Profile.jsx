@@ -8,7 +8,7 @@ const Profile = () => {
 
   useEffect(() => {
     if (user) {
-      authAxios.get('/auth/profile')
+      authAxios.get('/profile')
         .then(res => setProfile(res.data))
         .catch(err => console.error('Profile fetch error', err));
     }

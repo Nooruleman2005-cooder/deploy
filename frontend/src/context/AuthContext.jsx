@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      axios.get('/auth/profile', {
+      axios.get('/profile', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
